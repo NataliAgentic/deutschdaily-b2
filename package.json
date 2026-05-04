@@ -1,0 +1,15 @@
+{
+  "name": "deutschdaily-b2",
+  "version": "1.0.0",
+  "description": "A focused German learning web app for B2 learners — daily vocabulary and English-to-German lookup.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

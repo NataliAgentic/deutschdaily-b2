@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeutschDaily B2 — Daily German Vocabulary</title>
+  <meta name="description" content="A focused German learning app for B2 learners. Five new words every day plus an instant English-to-German lookup." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-mark">DD</span>
+        <div class="brand-text">
+          <h1>DeutschDaily</h1>
+          <span class="brand-tag">B2 · upper-intermediate</span>
+        </div>
+      </div>
+      <p class="today" id="todayLabel"></p>
+    </div>
+  </header>
+
+  <main class="container main-stack">
+
+    <!-- Daily 5 section -->
+    <section class="panel" id="dailyPanel">
+      <div class="panel-head">
+        <div>
+          <h2>Today's 5 Words</h2>
+          <p class="panel-sub">Same five words for everyone today. Tomorrow they change.</p>
+        </div>
+        <button id="shuffleBtn" class="btn btn-ghost" type="button">Shuffle 5 more</button>
+      </div>
+      <div class="cards" id="dailyCards"></div>
+    </section>
+
+    <!-- Translator section -->
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <h2>English → German</h2>
+          <p class="panel-sub">Look up a word from our curated B2 dictionary.</p>
+        </div>
+      </div>
+      <div class="search-row">
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Type an English word — e.g. 'challenge'"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button id="searchBtn" class="btn btn-primary" type="button">Search</button>
+      </div>
+      <p class="search-status" id="searchStatus"></p>
+      <div class="cards" id="searchCards"></div>
+    </section>
+
+    <!-- Favorites section -->
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <h2>Your Favorites</h2>
+          <p class="panel-sub">Saved in your browser. Star any word above to add it here.</p>
+        </div>
+        <button id="clearFavBtn" class="btn btn-ghost" type="button" hidden>Clear all</button>
+      </div>
+      <div class="cards" id="favCards"></div>
+      <p class="empty-state" id="favEmpty">No favorites yet. Click a star to save a word.</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Built for B2 German learners · Curated vocabulary, not machine-translated.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
